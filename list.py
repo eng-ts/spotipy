@@ -21,13 +21,13 @@ while playlists_dict:
 
 # %%
 
-nomade = [name for name in playlists if name.startswith("Nomad")]
-nomade_meta = playlists[nomade[0]]
+target = [name for name in playlists if name.startswith("magiciens")]
+target_meta = playlists[target[0]]
 
-nomade_pl = sp.playlist(nomade_meta["id"])
+nomade_pl = sp.playlist(target_meta["id"])
 
 tracks = nomade_pl['tracks']['items']
-with open('nomade.txt', 'w') as f:
+with open('magiciens.txt', 'w') as f:
     for track in tracks:
         artist_name = track['track']['artists'][0]['name']
         track_name = track['track']['name']
